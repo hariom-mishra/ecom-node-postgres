@@ -2,7 +2,6 @@ import express from 'express';
 import { getAllUsersService, createUserService , loginUserService, getUserByIdService} from '../services/user.services.js';
 import AppError from '../utils/AppError.js';
 import AppResponse from '../utils/AppResponse.js';
-import { verifyToken } from '../utils/jwt.js';
 
 export const registerUserController = async (req, res, next) => {
     try {
