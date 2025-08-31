@@ -20,5 +20,5 @@ A Node.js + Express backend for an e-commerce platform with PostgreSQL, JWT auth
 
 1. Clone the repository
 ```bash
-git clone https://github.com/your-username/storehub-api.git
+git clone https://github.com/hariom-mishra/ecom-node-postgres.git
 cd storehub-api
