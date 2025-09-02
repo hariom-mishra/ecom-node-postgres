@@ -2,15 +2,7 @@ import pool from "../db/index.js";
 import { errorHandler } from "../middlewares/errorHanlder.middleware.js";
 
 export async function initiateUserModel() {
-    return await pool.query(
-        `CREATE TABLE IF NOT EXISTS users (
-            id SERIAL PRIMARY KEY,
-            name VARCHAR(100) NOT NULL,
-            email VARCHAR(100) UNIQUE NOT NULL,
-            password VARCHAR(100) NOT NULL,
-            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-        )`
-    );
+    
 }
 
 export async function getAllUsers() {
