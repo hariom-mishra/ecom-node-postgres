@@ -1,7 +1,7 @@
 import app from "./app.js";
 import dotenv from "dotenv";
 import pool from "./db/index.js";
-import { initiateUserModel } from "./models/user.model.js";
+import { initializeTables } from "./db/initTables.js";
 dotenv.config();
 
 const PORT = process.env.PORT || 3000;
@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 3000;
 async function testConnection() {
   try {
     const client = await pool.connect();
-    initiateUserModel();
+    initializeTables();
     console.log('✅ Connected to PostgreSQL');
     
     // optional test query
